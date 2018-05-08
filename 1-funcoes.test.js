@@ -16,7 +16,7 @@ test('2 - Criar uma função que receba dois patos e informe qual é mais pesado
 })
 
 
-test.only('3 - Implementar função "valorPassagem" que receba o valor da passagem e retorne uma outra função "totalGrupo" que quando invocada passando a quantidade de pessoas, retorne o valor total de passagem para o grupo.', t => {
+test('3 - Implementar função "valorPassagem" que receba o valor da passagem e retorne uma outra função "totalGrupo" que quando invocada passando a quantidade de pessoas, retorne o valor total de passagem para o grupo.', t => {
   const valor = 30
 
   function valorPassagem(valor) {
