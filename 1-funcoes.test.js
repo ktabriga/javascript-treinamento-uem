@@ -1,7 +1,7 @@
 const test = require('ava')
 
 test('1 - Criar função que receba um nome e retorne uma string com uma saudação', t => {
-
+  const saudacao = nome => 'Hello to Javascript World ' + nome
   const resultado = saudacao('Mauricio')
 
   t.is(resultado, 'Hello to Javascript World Mauricio')	
@@ -11,16 +11,23 @@ test('2 - Criar uma função que receba dois patos e informe qual é mais pesado
   const pato1 = {nome: 'Ronaldo', peso: 10}
   const pato2 = {nome: 'Fernando', peso: 8}
 
+  const patosMaisPesado = (p1, p2) => {
+    if (p1.peso > p2.peso) {
+      return p1
+    }
+    return p2
+  }
+
   const patoPesado = patosMaisPesado(pato1, pato2)
   t.is(patoPesado, pato1)
 })
 
 
-test.only('3 - Implementar função "valorPassagem" que receba o valor da passagem e retorne uma outra função "totalGrupo" que quando invocada passando a quantidade de pessoas, retorne o valor total de passagem para o grupo.', t => {
+test('3 - Implementar função "valorPassagem" que receba o valor da passagem e retorne uma outra função "totalGrupo" que quando invocada passando a quantidade de pessoas, retorne o valor total de passagem para o grupo.', t => {
   const valor = 30
 
   function valorPassagem(valor) {
-    return null
+    return quantidade => valor * quantidade
   }
 
   const totalGrupo = valorPassagem(valor)
