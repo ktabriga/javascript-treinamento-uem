@@ -4,7 +4,7 @@ test('1 - Criar função que receba um nome e retorne uma string com uma saudaç
 
   const resultado = saudacao('Mauricio')
 
-  t.is(resultado, 'Hello to Javascript World Mauricio')	
+  t.is(resultado, 'Hello to Javascript World Mauricio')
 })
 
 test('2 - Criar uma função que receba dois patos e informe qual é mais pesado', t => {
@@ -16,20 +16,31 @@ test('2 - Criar uma função que receba dois patos e informe qual é mais pesado
 })
 
 
-test('3 - Implementar função "valorPassagem" que receba o valor da passagem e retorne uma outra função "totalGrupo" que quando invocada passando a quantidade de pessoas, retorne o valor total de passagem para o grupo.', t => {
+test('3 - Criar função "valorPassagem" que receba o valor da passagem e retorne uma outra função "totalGrupo" que quando invocada passando a quantidade de pessoas, retorne o valor total de passagem para o grupo.', t => {
   const valor = 30
 
-  function valorPassagem(valor) {
-    return null
-  }
 
   const totalGrupo = valorPassagem(valor)
   const total8 = totalGrupo(8)
   const total15 = totalGrupo(15)
 
-  t.is(total8, 240)   
-  t.is(total15, 450)   
+  t.is(total8, 240)
+  t.is(total15, 450)
 })
 
+test('4 - Crie um função que transforme o pato em pato assado', t => {
+  const pato = {
+    peso: 3,
+    cor: 'branco'
+  }
 
+  t.is(assarPato(pato), {
+    peso: 3,
+    assado: true
+  })
 
+  t.is(pato, {
+    peso: 3,
+    cor: 'branco'
+  })
+})
